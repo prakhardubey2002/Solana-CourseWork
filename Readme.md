@@ -5,7 +5,7 @@ If work is submitted then transaction to blockchain it has to be propagated  to 
 
 #### Proof of History
 
-Proof of History (PoH) is a method of incorporating time itself into the blockchain, attempting to reduce the load on network nodes while processing blocks. also Proof of history is not a consesus mechanism it just allow timestamp everything that happen in blockchain
+Proof of History (PoH) is a method of incorporating time itself into the blockchain, attempting to reduce the load on network nodes while processing blocks. also Proof of history is not a consesus mechanism it just allow timestamp everything that happen in blockchain,Every transaction when seen in solana explorer will have timestamp attribute for it
 
 #### Practical Byzantine fault Tolerance
 Solana implements a derivation of PBFT, but with one fundamental difference. Proof of History (PoH) provides a global source of time before consensus. Our implementation of PBFT uses the PoH as the network clock of time, and the exponentially-increasing time-outs that replicas use in PBFT can be computed and enforced in the PoH itself.PoH is a Verifiable Delay Function implemented as a sequential hash function. We use a loose definition of a VDF, since verification requires (compute time)/(number of cores)
@@ -55,3 +55,9 @@ It's also called "Assigned Program Id"
     pub rent_epoch: Epoch,
 }
  ```
+ #### Types of account 
+ 1.Data Account: Stores normal data,that can be serialised using borsh 
+ 2.Program Account: Stores executable data/code
+
+
+ [Note:In Solana web3js add "type":"module"  
