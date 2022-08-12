@@ -58,6 +58,34 @@ It's also called "Assigned Program Id"
  #### Types of account 
  1.Data Account: Stores normal data,that can be serialised using borsh 
  2.Program Account: Stores executable data/code
+### SolanaPy
+python library to play with solana,installation:
+```bash
+pip3 install solana
+```
+pip3 is for wsl/linux distribution
+ [Note:In Solana web3js add "type":"module"  to avoid error]
+ if using local rpc for solana py program launch validator by
+ ```bash
+ solana-test-validator
+ ```
+ this validator open on localhost:8899
 
-
- [Note:In Solana web3js add "type":"module"  
+ Simple solanPy grogram for keypay generation
+ ```python
+ import solana
+from solana.rpc.api import Client
+http_client = Client("http://localhost:8899")
+from solana.keypair import Keypair
+Keypair = Keypair.generate()
+print(Keypair.public_key)
+print(Keypair.secret_key)
+```
+```bash
+python3 main.py
+```
+Output:
+```bash
+E6BX7o3HLRzSs3pXYrAg5B2DoM2YSTWmJCjss4tZRkiE
+b']\x8b\xa8\x0b7e+]\xcb,\xdfp\xf3\x82\t\xf7\x07a\x9a\xc7\x9c\x1b\xe4Cl\x02!H~_\x99\x01\xc2{\xban\xde=GU\x91,\x95\x03t\xfc\x1f\x1c\xd7\xc6\x06\xbep\xe7R\x82\xe11\xcfB2{\xcc\xc3'
+```
