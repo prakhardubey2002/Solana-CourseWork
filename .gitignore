@@ -1,2 +1,38 @@
 node_modules
 test-ledger
+# Rust
+**/*.rs.bk
+
+# Solana
+*test-ledger/
+
+# Anchor
+*.anchor/
+*target/
+
+# Node
+*node_modules/
+
+# Python
+*venv/
+
+# IDE
+*.vscode/
+*.idea/
+
+# Mac
+*.DS_Store
+
+# Vue
+*dist/
+
+# Others
+*.log
+*logs
+*.env
+.env.local
+.env.*.local
+*build/
+
+# Firebase
+*.firebase/

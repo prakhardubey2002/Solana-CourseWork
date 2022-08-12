@@ -89,3 +89,64 @@ Output:
 E6BX7o3HLRzSs3pXYrAg5B2DoM2YSTWmJCjss4tZRkiE
 b']\x8b\xa8\x0b7e+]\xcb,\xdfp\xf3\x82\t\xf7\x07a\x9a\xc7\x9c\x1b\xe4Cl\x02!H~_\x99\x01\xc2{\xban\xde=GU\x91,\x95\x03t\xfc\x1f\x1c\xd7\xc6\x06\xbep\xe7R\x82\xe11\xcfB2{\xcc\xc3'
 ```
+
+
+## Solana CLI
+For list of command
+```bash
+solana --help
+``` 
+For listing available data of wallet using public key
+```bash
+solana account <Public key>
+``` 
+
+```bash
+Public Key: <Public key>
+Balance: 4.12567404 SOL
+Owner: 11111111111111111111111111111111
+Executable: false
+Rent Epoch: 357
+```
+Command to List RPC to which wallet point
+```bash
+solana config get
+```
+output
+```bash
+Config File: /home/------/li/config.yml
+RPC URL: https://api.devnet.solana.com
+WebSocket URL: wss://api.devnet.solana.com/ (computed)
+Keypair Path: /home/--------/devnettest.json
+Commitment: confirmed
+```
+Command to switch between mainnet,devnet,tex=stnet
+```bash
+solana config --url set <url>/https://api.devnet.solana.com/https://api.testnet.solana.com
+```
+Airdrop command(Only work in devnet and testnet)
+```bash
+solana balance
+solana airdrop 1
+solana balance
+```
+TO see all avialbe system and gossip and rpc
+```bash
+solana gossip
+```
+To see solana transaction logs
+```bash
+solana logs
+```
+Solana deploy and show programs command
+```bash
+solana program
+```
+```bash
+solana program shoW <ADDRESS>
+```
+SOL transfer command
+```bash
+solana transfer <public address> <amount>
+solana transfer 7vNuzfsocjijdiojvndovidhvhdihvd 1
+```
