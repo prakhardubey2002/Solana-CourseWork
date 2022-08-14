@@ -9,9 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "@solana/spl-token": "^0.3.0",
     "@solana/web3.js": "^1.52.0"
-  },
-  "type": "module"
+  }
 }
